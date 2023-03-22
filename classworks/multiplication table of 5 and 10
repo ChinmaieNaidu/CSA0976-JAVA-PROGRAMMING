@@ -5,7 +5,7 @@ class Table
 	{
 		synchronized(this)
 		{
-			for (int i =1;i<=5;i++)
+			for (int i =1;i<=10;i++)
 			{
 				System.out.println(+n+"*"+i+"="+(n*i));
 				try
@@ -20,10 +20,10 @@ class Table
 		}
 	}
 }
-class Mythread1 extends Thread
+class MyThread1 extends Thread
 {
 	Table t;
-	Mythread1(Table t)
+	MyThread1(Table t)
 	{
 		this.t=t;
 	}
@@ -32,10 +32,10 @@ class Mythread1 extends Thread
 		t.printTable(5);
 	}
 }
-class Mythread2 extends Thread
+class MyThread2 extends Thread
 {
 	Table t;
-	Mythread2(Table t)
+	MyThread2(Table t)
 	{
 		this.t=t;
 	}
